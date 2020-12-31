@@ -1,0 +1,5 @@
+/* FFZ Force wide */
+.ffz-fix .ffz-emote {
+    min-height: 20px !important;
+    min-width: auto !important;
+}

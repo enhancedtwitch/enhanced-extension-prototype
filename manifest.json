@@ -1,0 +1,41 @@
+{
+    "manifest_version": 2,
+    "name": "EnhancedTwitch",
+    "description": "Enhanced Twitch with new features like Stream Preview, Fullscreen chat and custom backgrond support.",
+    "version": "0.1",
+    "permissions": ["storage"],
+    "content_scripts": [{
+        "matches": [
+            "*://*.twitch.tv/*"
+        ],
+
+        "js": [
+            "libs/jquery.js", "libs/jqui.js", "libs/arrive.js",
+
+            "settings.js", "core.js", "gui/gui.js", 
+
+            "modules/banscreen.js", "modules/twitchpreviews.js", "modules/chatoverlay.js"
+        ],
+
+        "css": [
+            "core.css", 
+            
+            "modules/removecarousel.css", "modules/twitchpreviews.css", "modules/ffzemotefix.css", "modules/chatoverlay.css", "modules/chatoverlay.css"
+        ],
+
+        "run_at": "document_end"
+    }],
+
+    "icons": {
+        "16": "images/icon-w.png",
+        "24": "images/icon-w.png",
+        "48": "images/icon-w.png"
+    },
+
+    "browser_action": {
+        "default_icon": "images/icon-w.png",
+        "default_title": "EnhancedTwitch"
+    },
+
+    "web_accessible_resources": ["images/icon-b.png", "images/offline.jpg", "images/icon-w.png"]
+}
