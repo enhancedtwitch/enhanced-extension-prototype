@@ -115,7 +115,7 @@ function createToggleOption (name, description, key) {
 
 function populateMenu (items) {
     items.appendChild(createStringOption("Custom background", "Set your own background for the Website", "backgroundImageUrl"))
-    items.appendChild(createToggleOption("Fix FFZ emote size", "Correct the size of the new Frankerfacez emote Wide and regain its old style.s", "fixFFZWideEmotes"));
+    items.appendChild(createToggleOption("Fix FFZ emote size", "Correct the size of the new Frankerfacez emote Wide and regain its old style.", "fixFFZWideEmotes"));
     items.appendChild(createToggleOption("Fullscreen Chat", "Show chat in full screen.", "showChatInFullscreen"));
     items.appendChild(createToggleOption("Preview streams", "Show a preview of the stream when you hover over the list of followed channels.", "showStreamPreviews"));
     items.appendChild(createToggleOption("Remove frontpage carousel", "Remove the recommended carousel on the main Twitch page", "removeCarousel"))
@@ -166,10 +166,8 @@ function createMenu () {
 
     let itemElement = document.createElement("div");
     itemElement.innerHTML = `
-    <span style="position: absolute; font-size: 16px; left: 10%; width: 100%; padding-top 3px; padding-bottom: 2%;">
-        Follow development on <a href="https://twitter.com/enhancedtwitch">@EnhancedTwitch</a> - 
+    <span style="position: absolute; font-size: 16px; width: 100%; padding-top 3px; bottom: 100%;">
         Created by <a href="https://twitter.com/sammwy">@Sammwy</a> - 
-        Donate with <a href="https://paypal.me/sammwy">Paypal</a>
     </span>
     `;
     populateMenu(itemElement);
